@@ -158,7 +158,7 @@ head(added, 20)
 ## 18    28    8
 ```
 
-A total of 2304 NA values have been imputed, of which 81.6% were imputed as zero.  
+A total of 2304 NA values were imputed, of which 81.6% were imputed as zero.  
 
 The sum of steps per day is then calculated again and the distribution is plotted as an histogram:
 

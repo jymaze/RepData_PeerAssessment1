@@ -160,7 +160,7 @@ head(added, 20)</code></pre>
 ## 14    20    8
 ## 15    24    8
 ## 18    28    8</code></pre>
-<p>A total of 2304 NA values have been imputed, of which 81.6% were imputed as zero.</p>
+<p>A total of 2304 NA values were imputed, of which 81.6% were imputed as zero.</p>
 <p>The sum of steps per day is then calculated again and the distribution is plotted as an histogram:</p>
 <pre class="r"><code>agg3&lt;-aggregate(steps~date,data=df_nona,FUN=sum,na.rm=TRUE)
 histogram(~steps,data=agg3,

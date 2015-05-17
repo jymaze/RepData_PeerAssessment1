@@ -103,7 +103,7 @@ added<-added[order(added$Freq, decreasing=TRUE), ]
 head(added, 20)
 ```
 
-A total of `r sum(added$Freq)` NA values have been imputed, of which `r round(added$Freq[1]/sum(added$Freq)*100, 2)`% were imputed as zero.  
+A total of `r sum(added$Freq)` NA values were imputed, of which `r round(added$Freq[1]/sum(added$Freq)*100, 2)`% were imputed as zero.  
 
 The sum of steps per day is then calculated again and the distribution is plotted as an histogram:
 
