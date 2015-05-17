@@ -6,7 +6,7 @@ This document corresponds to Peer Assessment 1 (as of May 2015) of the Reproduci
 
 The dataset is data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.The time is expressed in military format, omitting any leading zero, e.g., 510 is 5:10 am.
 
-The lattice package is used to generate plots on this document.
+The lattice package is used to generate plots in this document.
 
 ## Loading and preprocessing the data
 
@@ -20,7 +20,7 @@ df$date<-as.Date(df$date) #Convert date from character to date type
 
 This dataset includes 17568 observations of 3 variables.
 
-Here is a view of the top rows of the dataset.
+Here is a view of the top rows of the dataset:  
 
 
 ```r
@@ -39,7 +39,7 @@ head(df) #Have a look
 
 ## What is mean total number of steps taken per day?
 
-The sum of steps per day is calculated and the distribution is plotted as an histogram. 
+The sum of steps per day is calculated and the distribution is plotted as an histogram: 
 
 
 ```r
@@ -62,7 +62,7 @@ The mean number of steps taken per day is 10766.19 and the median is 10765.
 
 ## What is the average daily activity pattern?
 
-The mean number of steps per time interval is calculated and the evolution thoughout the day is plotted as a line graph. 
+The mean number of steps per time interval is calculated and the evolution thoughout the day is plotted as a line graph: 
 
 
 ```r
@@ -83,7 +83,7 @@ The 5-minute time interval containing the maximal average number of steps is 835
 
 ## Imputing missing values
 
-The number of missing values is computed.
+The number of missing values is computed:
 
 
 ```r
@@ -108,7 +108,7 @@ for(i in 1:nrow(df_nona)){ #Replace NAs with imputed value for same interval
 }
 ```
 
-Here is a view of the top rows of the dataset after imputation.  
+Here is a view of the top rows of the dataset after imputation:  
 
 
 ```r
@@ -125,7 +125,7 @@ head(df_nona) #Just a display to check that NAs are gone
 ## 6     0 2012-10-01       25
 ```
 
-And here is a view of the most common values that were inserted.
+And here is a view of the most common values that were inserted:
 
 
 ```r
@@ -160,7 +160,7 @@ head(added, 20)
 
 A total of 2304 NA values have been imputed, of which 81.6% were imputed as zero.  
 
-The sum of steps per day is then calculated again and the distribution is plotted as an histogram.
+The sum of steps per day is then calculated again and the distribution is plotted as an histogram:
 
 
 ```r
@@ -183,7 +183,7 @@ This method of imputation of missing values lowered the mean and the median numb
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-The date column is processed to determine if the day is a week day or a week-end day. Then the mean number of steps per time interval is calculated separately for week days and week-end days. The evolution throughout the day is plotted as a line graph. 
+The date column is processed to determine if the day is a week day or a week-end day. Then the mean number of steps per time interval is calculated separately for week days and week-end days. The evolution throughout the day is plotted as a line graph: 
 
 
 ```r
@@ -207,4 +207,4 @@ xyplot(steps~interval|day,data=agg4,
 
 ![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
 
-Average activity on week days starts earlier, at about 500, is mostly prominent around 800-900 and 1800-1900. Average activity on week-end days is more spread out during the waking hours of the day, while a peak of activity around 800-900 is still visible.
+The average activity on week days starts earlier, at about 500, is mostly prominent around 800-900 and 1800-1900. Average activity on week-end days is more spread out across the waking hours of the day, while a peak of activity around 800-900 is still visible.
